@@ -21,18 +21,18 @@ public class CardTrick {
     {
         Card[] magicHand = new Card[7];
         //Card userCard = new Card();
-        Card luckyCard=newCard();
+        Card luckyCard=new Card();
         luckyCard.setValue(3);
         luckyCard.setSuit(Card.SUITS[3]);
         System.out.println("Lucky card is: "+luckyCard.getValue()+luckyCard.getSuit());
         
         boolean match=false;
         
-        Scanner myScanner = new Scanner(System.in);
-        System.out.println("Pick a card value (from 1 to 13)");
-        userCard.setValue(myScanner.nextInt());
-        System.out.println("Pick a card suit (0-Hearts, 1-Diamonds, 2-Spades, 3-Clubs)");
-        userCard.setSuit(Card.SUITS[myScanner.nextInt()]);
+        //Scanner myScanner = new Scanner(System.in);
+        //System.out.println("Pick a card value (from 1 to 13)");
+        //userCard.setValue(myScanner.nextInt());
+        //System.out.println("Pick a card suit (0-Hearts, 1-Diamonds, 2-Spades, 3-Clubs)");
+        //userCard.setSuit(Card.SUITS[myScanner.nextInt()]);
         //System.out.println("you picked card value of:"+userCard.getValue());
         //System.out.println("you picked card suit of:"+userCard.getSuit());
         
