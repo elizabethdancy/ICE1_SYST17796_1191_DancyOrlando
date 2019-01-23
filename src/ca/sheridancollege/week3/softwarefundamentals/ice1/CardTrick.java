@@ -39,10 +39,10 @@ public class CardTrick {
         //System.out.println("Input a card (1-13) > ");
         Card card = new Card();
         //card.setValue(in.nextInt());
-        card.setValue(8;
+        card.setValue(8);
         //System.out.println("Input a suit (1-4) > ");
         //card.setSuit(Card.SUITS[in.nextInt()]);
-        card.setSuit(3);
+        card.setSuit(Card.SUITS[3]);
         //Then report the result here
         boolean found = false;
         for (int i=0; i<magicHand.length; i++)
