@@ -26,6 +26,7 @@ public class CardTrick {
             magicHand[i] = c;
         }
         
+        /*
         //insert code to ask the user for Card value and suit, create their card
         Scanner input = new Scanner(System.in);
         Card specialCard = new Card();
@@ -40,8 +41,13 @@ public class CardTrick {
         input.next();
         String specialSuit = input.nextLine();
         specialCard.setSuit(specialSuit);
-        
+        */
         System.out.println();
+        
+        // Hard code special card as 8 of diamonds
+        Card specialCard = new Card();
+        specialCard.setValue(8);
+        specialCard.setSuit("Diamonds");
        
         
         // and search magicHand here
