@@ -10,23 +10,51 @@ package ca.sheridancollege.week3.softwarefundamentals.ice1;
  * and then asks the user to pick a card and searches the array of cards
  * for the match to the user's card. To be used as starting code in ICE 1
  * @author dancye
+ * @modified by Greg Knott, 
  */
+import java.util.Scanner;
+import java.util.Random;
 public class CardTrick {
     
     public static void main(String[] args)
     {
+        Scanner scan = new Scanner(System.in);
         Card[] magicHand = new Card[7];
+        int noCardCounter = 0;
+        int cardCounter = 0;
         
-        for (int i=0; i<magicHand.length; i++)
+        
+        for (int i=0; i < magicHand.length; i++)
         {
+            Random r = new Random();
+            int val = (r.nextInt(12)+1);
+            int suit = (r.nextInt(3));
+        
             Card c = new Card();
-            //c.setValue(insert call to random number generator here)
-            //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
+            c.setValue(val);
+            c.setSuit(Card.SUITS[suit]);
+            magicHand[i] = c;
         }
         
-        //insert code to ask the user for Card value and suit, create their card
-        // and search magicHand here
-        //Then report the result here
+        Card userCard = new Card();
+        System.out.print("Please enter a card value: ");
+        userCard.setValue(scan.nextInt());
+        System.out.print("Please enter a card Suit: ");
+        userCard.setSuit(scan.next());
+        
+        for (int i=0; i < magicHand.length; i++)
+        {
+            if ((userCard.getValue() == magicHand[i].getValue()) && 
+                    (userCard.getSuit().equals(magicHand[i].getSuit())))
+                cardCounter++;
+            else
+                noCardCounter++;
+        }
+        
+        if (noCardCounter == magicHand.length)
+            System.out.println("Your card was not in the magic hand");
+        else if (cardCounter > 0)
+            System.out.println("Your card was in the magic hand!");
     }
     
 }
