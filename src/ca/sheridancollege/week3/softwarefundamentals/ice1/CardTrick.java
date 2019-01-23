@@ -35,14 +35,18 @@ public class CardTrick {
 
         Card choice = new Card();
 
-        //insert code to ask the user for Card value and suit, create their card
-        System.out.print("Please type in a Card value: ");
-        int value = input.nextInt();
-        choice.setValue(value);
+//         //insert code to ask the user for Card value and suit, create their card
+//         System.out.print("Please type in a Card value: ");
+//         int value = input.nextInt();
+//         choice.setValue(value);
 
-        System.out.print("Please enter a Suit: ");
-        String suit = input.next();
-        choice.setSuit(suit);
+//         System.out.print("Please enter a Suit: ");
+//         String suit = input.next();
+//         choice.setSuit(suit);
+        
+           choice.setSuit("Spades");
+           choice.setValue(3);
+            
 
         // and search magicHand here      
         for (int i = 0; i < magicHand.length; i++) {
