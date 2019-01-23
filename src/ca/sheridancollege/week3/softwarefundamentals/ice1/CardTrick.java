@@ -33,7 +33,7 @@
                     magicHand[i] = c;
                 }
                 
-                //Prompts User to Pick Suit + Value of card
+                /*Prompts User to Pick Suit + Value of card
                 System.out.println("Please choose a Suit");
                 String userSuit = userKeys.nextLine();
                 System.out.println("Please choose the Value of the card");
@@ -41,13 +41,19 @@
                 Card userCard = new Card();
                 userCard.setSuit(userSuit);
                 userCard.setValue(userValue);
-                
-                
+                */
+            
+                //Object for 5 of Diamonds
+                Card myCard = new Card();
+                myCard.setValue(5);
+                myCard.setSuit("Diamonds");
+            
+          
                 boolean matchingCard = false;   
-                //Checks if their card matches any of the cards in the magicHand array
+                //Checks if myCard matches any of the cards in the magicHand array
                 for (int i=0; i<magicHand.length; i++)
                 {
-                    if(magicHand[i].getSuit() == userCard.getSuit() && magicHand[i].getValue() == userCard.getValue()){
+                    if(magicHand[i].getSuit() == myCard.getSuit() && magicHand[i].getValue() == myCard.getValue()){
                         matchingCard = true;
                         break;
                     }
