@@ -21,6 +21,11 @@ public class CardTrick {
         Card[] magicHand = new Card[7];
         Random randomCard = new Random();
         Scanner myScanner = new Scanner(System.in);
+        Card luckyCard = new Card();
+        boolean win = false;
+        
+        luckyCard.setValue(13);
+        luckyCard.setSuit(1);
         
         for (int i=0; i<magicHand.length; i++)
         {
@@ -30,6 +35,19 @@ public class CardTrick {
             magicHand[i]=c;
         }
         
+        for (int i=0; i<magicHand.length; i++)
+        {
+            if ((luckyCard.getSuit().equals(magicHand[i].getSuit())) && LuckyCard.getValue() == magicHand[i].getValue())
+            {
+                win = true;
+            }
+        }
+        
+        if (win)
+            System.out.println("You won!");
+        else
+            System.out.println("You lost!");
+        /*
         System.out.println("Insert a value from 1 to 13: ");
         int value = myScanner.nextInt();        
         
@@ -49,6 +67,7 @@ public class CardTrick {
                 System.out.println("Nope");
             }
         }
+        */
 
     }
     
