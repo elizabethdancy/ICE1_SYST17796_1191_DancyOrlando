@@ -38,16 +38,16 @@ public class CardTrick {
             magicHand[i] = c;
         }
         
-        Card userCard = new Card();
-        System.out.print("Please enter a card value: ");
-        userCard.setValue(scan.nextInt());
-        System.out.print("Please enter a card Suit: ");
-        userCard.setSuit(scan.next());
+//        Card userCard = new Card();
+//        System.out.print("Please enter a card value: ");
+//        userCard.setValue(scan.nextInt());
+//        System.out.print("Please enter a card Suit: ");
+//        userCard.setSuit(scan.next());
         
         for (int i=0; i < magicHand.length; i++)
         {
-            if ((userCard.getValue() == magicHand[i].getValue()) && 
-                    (userCard.getSuit().equals(magicHand[i].getSuit())))
+            if ((luckyCard.getValue() == magicHand[i].getValue()) && 
+                    (luckyCard.getSuit().equals(magicHand[i].getSuit())))
                 cardCounter++;
             else
                 noCardCounter++;
