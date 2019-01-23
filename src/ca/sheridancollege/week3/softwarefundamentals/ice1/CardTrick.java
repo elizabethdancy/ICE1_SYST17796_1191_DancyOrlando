@@ -10,7 +10,7 @@ import java.util.*;
  * and then asks the user to pick a card and searches the array of cards
  * for the match to the user's card. To be used as starting code in ICE 1
  * @author dancye
- * @modified Jacob Sintzel January 23, 2019
+ * @modified Jacob Sintzel January 23, 2019 Student ID: 991504575
  */
 public class CardTrick {
     
