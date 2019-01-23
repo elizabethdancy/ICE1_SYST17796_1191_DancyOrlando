@@ -22,7 +22,9 @@ public class CardTrick {
         Card[] magicHand = new Card[7];
         int noCardCounter = 0;
         int cardCounter = 0;
-        
+        Card luckyCard = new Card();
+        luckyCard.setValue(1);
+        luckyCard.setSuit("Clubs");
         
         for (int i=0; i < magicHand.length; i++)
         {
