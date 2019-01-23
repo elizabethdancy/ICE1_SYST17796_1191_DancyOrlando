@@ -37,6 +37,11 @@ public class CardTrick {
             }
         }
         //Then report the result here
+        for (int i = 0; i < magicHand.length; i++) {
+            String format = "Magic hand contains:%n"
+                    + "%s of %s %n";
+            System.out.printf(format, magicHand[i].getValue(), magicHand[i].getSuit());
+        }
         
         if(isCard == true)
             System.out.println("The magic hand contains your card!");
