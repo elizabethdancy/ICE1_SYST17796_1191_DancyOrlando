@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package ca.sheridancollege.week3.softwarefundamentals.ice1;
-import java.util.Scanner;
 import java.util.Random;
 
 /**
@@ -33,26 +32,18 @@ public class CardTrick {
             magicHand[i] = c;
         }
         
-        // Ask the user for Card value and suit
-        Scanner scn = new Scanner(System.in);
-        System.out.println("Pick a card! Any card!");
-        System.out.print("Please enter your card value: ");
-        int myValue = scn.nextInt();
-        System.out.print("Please enter your card suit: ");
-        String mySuit = scn.next();
+        // Create lucky card
+        Card luckyCard = new Card();
+        luckyCard.setValue(7);
+        luckyCard.setSuit("Clubs");
         
-        // Create the user's card
-        Card myCard = new Card();
-        myCard.setValue(myValue);
-        myCard.setSuit(mySuit);
-        
-        // Search magicHand for user's card
+        // Search magicHand for lucky card
         boolean matchingCards = false;
         for (i = 0; i < magicHand.length; i++)
         {
-            if (magicHand[i].getSuit().matches(mySuit))
+            if (magicHand[i].getSuit().matches(luckyCard.getValue()))
             {
-                if (magicHand[i].getValue() == myValue)
+                if (magicHand[i].getValue() == luckyCard.setValue())
                     matchingCards = true;
             }
         }
@@ -60,7 +51,7 @@ public class CardTrick {
         // Report results
         System.out.println("\nYour results:\n------------\n");
         System.out.println("\tYour card: " 
-                + myCard.getValue() + " of " + myCard.getSuit());
+                + luckyCard.getValue() + " of " + luckyCard.getSuit());
         if (matchingCards) System.out.println("\tIt's a match!");
         else System.out.println("\tSorry, better luck next time!");
         System.out.println("\nThe magic hand was:\n");
