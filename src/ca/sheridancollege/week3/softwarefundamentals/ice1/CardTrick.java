@@ -44,8 +44,8 @@ public class CardTrick {
         
         boolean match = false;
         for (int i=0; i<magicHand.length; i++) {
-            if (magicHand[i].getValue() == val) {
-                if (magicHand[i].getSuit().matches(s1))
+            if (magicHand[i].getValue() == 6) {
+                if (magicHand[i].getSuit().matches("clubs"))
                     match = true;
             }
         }
