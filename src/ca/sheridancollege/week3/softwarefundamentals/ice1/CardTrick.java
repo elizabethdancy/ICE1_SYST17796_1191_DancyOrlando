@@ -27,11 +27,16 @@ public class CardTrick {
         }
         
         //insert code to ask the user for Card value and suit, create their card
-        Card userCard = new Card();
+        /*Card userCard = new Card();
         System.out.println("Enter your cards value: ");
         userCard.setValue(keyboard.nextInt());
         System.out.println("Enter your cards suit: ");
         userCard.setSuit(Card.SUITS[keyboard.nextInt()]);
+        */
+        Card luckyCard = new Card();
+        luckyCard.setSuit = "Clubs";
+        luckCard.setValue = 8;
+            
         // and search magicHand here
         boolean match = false;
         for (int i = 0; i<magicHand.length; i++){
