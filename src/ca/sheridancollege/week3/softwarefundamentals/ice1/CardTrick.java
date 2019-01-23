@@ -35,17 +35,20 @@ public class CardTrick {
         //adding lucking card
         Card luckyCard = new Card();
         luckyCard.setValue(12);
-        luckyCard.setSuit("Hearts");
+        luckyCard.setSuit("Diamonds");
         
+        /*
         System.out.println("Input card number");
         int cardNumber = keyIn.nextInt();
         System.out.println("Input card suit ");
-        String cardSuit = keyIn.next();
+        String cardSuit = keyIn.next();*/
         
+        /*
         Card userCard = new Card();
         userCard.setValue(cardNumber);
-        userCard.setSuit(cardSuit);
+        userCard.setSuit(cardSuit);*/
         
+        /*
         boolean didYouWin = false;
         for(int j = 0; j<magicHand.length; j++){
             if((cardNumber == magicHand[j].getValue()) && 
@@ -53,7 +56,17 @@ public class CardTrick {
                 didYouWin = true;
                 break;
             }
+        }*/
+        
+         boolean didYouWin = false;
+        for(int j = 0; j<magicHand.length; j++){
+            if((luckyCard.getValue() == magicHand[j].getValue()) && 
+                    (luckyCard.getSuit().equalsIgnoreCase(magicHand[j].getSuit()))){
+                didYouWin = true;
+                break;
+            }
         }
+            
         
         if(didYouWin == true){
             System.out.println("You win");
@@ -68,3 +81,4 @@ public class CardTrick {
     }
     
 }
+
