@@ -21,6 +21,11 @@ public class CardTrick {
         Card[] magicHand = new Card[7];
         Scanner keyboard = new Scanner(System.in);
         
+        // Added luckyCard
+        Card luckyCard = new Card();
+        luckyCard.setValue(7);
+        luckyCard.setSuit(SUITS[3]);
+        
         for (int i=0; i<magicHand.length; i++)
         {
             Card c = new Card();
