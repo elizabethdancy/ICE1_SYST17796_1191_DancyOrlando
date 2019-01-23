@@ -31,10 +31,14 @@ public class CardTrick {
             //c.setValue(insert call to random number generator here)
             //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
         }
-        System.out.println("Enter card value: ");
-        int value = Integer.parseInt(scanner.nextLine());
-        System.out.println("Enter suit name: ");
-        String suit = scanner.nextLine();
+//         System.out.println("Enter card value: ");
+//         int value = Integer.parseInt(scanner.nextLine());
+//         System.out.println("Enter suit name: ");
+//         String suit = scanner.nextLine();
+        
+        final int value = 1;
+        final String suit = "Clubs";
+        
         boolean win = false;
         
         for (int i = 0; i < magicHand.length; i++) {
