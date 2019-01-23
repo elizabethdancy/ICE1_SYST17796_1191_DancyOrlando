@@ -67,22 +67,7 @@ public class CardTrick {
         luckyCard.setValue(10);
         luckyCard.setSuit(Card.SUITS[2]);
         
-          for (Card c1 : magicHand) 
-        {
-            if (c1.getValue() == luckyCard.getValue() && c1.getSuit()==luckyCard.getSuit()) {
-                System.out.println("It is matched with the magicaHand");
-            found = true;
-                break;
-            } 
-            else 
-            {
-                found = false;
-            }
-        }
         
-        if (found == false) {
-            System.out.println("Can not find your card");
-        }
         
     /**
      *
