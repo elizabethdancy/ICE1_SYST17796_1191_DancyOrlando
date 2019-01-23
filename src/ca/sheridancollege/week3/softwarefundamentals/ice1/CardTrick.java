@@ -33,14 +33,18 @@ public class CardTrick {
             //0-3 here])
         }
         
+        Card c = new Card();
+        c.setValue(2);
+        c.setSuit("Spades");
+        
         //insert code to ask the user for Card value and suit, create their card
         // and search magicHand here
         //Then report the result here
-        System.out.println("Enter the Card value:");
-        int value = in.nextInt();
+        //System.out.println("Enter the Card value:");
+        //int value = in.nextInt();
         
-        System.out.println("Enter the Card suit:");
-        String cardSuit = in.nextLine();
+        //System.out.println("Enter the Card suit:");
+        //String cardSuit = in.nextLine();
         
         //checks if user has a magic hand
         for(int i = 0; i < magicHand.length; i++) {
