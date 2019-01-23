@@ -26,15 +26,22 @@ public class CardTrick {
             magicHand[i]=c;
         }
         
-        Scanner input=new Scanner(System.in);
+        
+        Card luckyCard= new Card();
+        luckyCard.setValue(1);
+        luckyCard.setSuit("Spades");
+        String luckyCardSuit = luckyCard.getSuit();
+
+        /*Scanner input=new Scanner(System.in);
         System.out.print("Please enter a number: ");
         int cardNumber= input.nextInt();
         System.out.print("Please enter a suit: ");
-        String cardSuit=input.next();
+        String cardSuit=input.next();*/
 
         for(int i=0; i<magicHand.length; i++){
-            if(cardNumber == magicHand[i].getValue() && cardSuit.equals(magicHand[i].getSuit())){
+            if(luckyCard.getValue() == magicHand[i].getValue() && luckyCardSuit.equals(magicHand[i].getSuit())){
                 System.out.println("Congratulations, you've guessed the correct card!");
+                break;
             }
             else{
                 System.out.println("Incorrect card");
