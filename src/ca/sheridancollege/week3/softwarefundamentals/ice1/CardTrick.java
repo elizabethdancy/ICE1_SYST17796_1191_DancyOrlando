@@ -32,9 +32,11 @@ public class CardTrick {
             c.setValue((int)(Math.random() * 13) + 1);
             c.setSuit(Card.SUITS[(int)(Math.random() * 4)]);
             magicHand[i] = c;
+            System.out.println(c.getSuit() + c.getValue());
         }
         
-        System.out.print("Pick a card!\nCard Value: ");
+        // Removed asking user for card, replaced with luckyCard.
+        /* System.out.print("Pick a card!\nCard Value: ");
         int cardValue = keyboard.nextInt();
         keyboard.nextLine();
         System.out.print("Card Suit: ");
@@ -50,11 +52,12 @@ public class CardTrick {
         Card userCard = new Card();
         userCard.setValue(cardValue);
         userCard.setSuit(Card.SUITS[cardSuitValue]);
+        */
         
         boolean found = false;
         for (int i = 0; i < magicHand.length; i++)
         {
-            if (magicHand[i].getSuit() == userCard.getSuit() && magicHand[i].getValue() == userCard.getValue())
+            if (magicHand[i].getSuit() == luckyCard.getSuit() && magicHand[i].getValue() == luckyCard.getValue())
             {
                 found = true;
                 break;
