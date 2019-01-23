@@ -13,6 +13,7 @@ import java.util.Scanner;
  * for the match to the user's card. To be used as starting code in ICE 1
  * @author dancye
  * modifiedBy:Sommer Arruda
+ *added hard coded lucky card from GitHub
  */
 import java.util.Scanner;
 public class CardTrick {
@@ -30,6 +31,11 @@ public class CardTrick {
             c.setSuit(Card.SUITS[(int)(Math.random()*4)]);
             magicHand[i] = c;
         }
+        
+        //adding lucking card
+        Card luckyCard = new Card();
+        luckyCard.setValue(12);
+        luckyCard.setSuit("Hearts");
         
         System.out.println("Input card number");
         int cardNumber = keyIn.nextInt();
