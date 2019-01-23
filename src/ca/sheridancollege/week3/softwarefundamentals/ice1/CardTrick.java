@@ -32,6 +32,16 @@ public class CardTrick {
         Card luckyCard = new Card();
         luckyCard.setSuit("Diamonds");
         luckyCard.setValue(13);
+        
+        for(int i = 0; i< magicHand.length; i++){
+            if(luckyCard.getValue() == magicHand[i].getValue() && luckyCard.getSuit() == luckyCard.getSuit()){
+                System.out.println("Card is in pile");
+            }
+            else{
+                System.out.println("Not in pile");
+            }
+        }
+        
        /** System.out.println("Please enter a card value: ");
         Scanner sc = new Scanner(System.in);
         int cardValue = sc.nextInt();
