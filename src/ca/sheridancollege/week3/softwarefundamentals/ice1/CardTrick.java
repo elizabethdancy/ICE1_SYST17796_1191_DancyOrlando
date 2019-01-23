@@ -23,6 +23,10 @@ public class CardTrick {
         myCard.setSuit(Card.SUITS[1]);
         myCard.setValue(6);
         
+        Card luncyCard = new Card();
+        luncyCard.setSuit(Card.SUITS[1]);
+        luncyCard.setValue(6);      
+        
         boolean finalResult = false;
 
         for (int i = 0; i < magicHand.length; i++) {
