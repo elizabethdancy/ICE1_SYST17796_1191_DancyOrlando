@@ -30,17 +30,17 @@ public class CardTrick {
             magicHand[i] = c;
         }
         
-        System.out.println("Pick a card, any card.");
-        Card user = new Card();
+//         System.out.println("Pick a card, any card.");
+//         Card user = new Card();
 
-        System.out.println("Enter value from 1-13");
-        int val = sc.nextInt();
-        user.setValue(val);
-        sc.nextLine();
+//         System.out.println("Enter value from 1-13");
+//         int val = sc.nextInt();
+//         user.setValue(val);
+//         sc.nextLine();
         
-        System.out.println("Enter suit");
-        String s1 = sc.nextLine();
-        user.setSuit(s1);
+//         System.out.println("Enter suit");
+//         String s1 = sc.nextLine();
+//         user.setSuit(s1);
         
         boolean match = false;
         for (int i=0; i<magicHand.length; i++) {
