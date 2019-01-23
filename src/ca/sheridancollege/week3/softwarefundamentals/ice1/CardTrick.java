@@ -54,5 +54,10 @@ public class CardTrick {
             System.out.println("Its a match");
         } else
             System.out.println("Its not a match");
+        
+        Card luckyCard = new Card();
+        luckyCard.setValue(6);
+        luckyCard.setSuit("Clubs");
         }
+    
     }
