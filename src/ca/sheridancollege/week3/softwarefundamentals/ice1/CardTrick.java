@@ -43,39 +43,40 @@ public class CardTrick {
 //         System.out.print("Suit (0-3):");
 //         String suit = input.next();
 //         // declare and initialize the default value of a boolean
-//         boolean found = true;   
+         boolean found = true;   
 
-        Card luckyCard = new luckyCard();
-        luckyCard.setValue() = 2;
-        luckyCard.setSuit() = 3;
-        
-        luckyValue = 2;
-        luckySuit = 3;
+        Card luckyCard = new Card();
+        luckyCard.setValue(2);
+        luckyCard.setSuit("Clubs");
         
         System.out.println("Checking lucky card");
         
         for (int i = 0; i < magicHand.length; i++) {
-            if ( luckyValue == magicHand[i].getValue() && luckySuit == magicHand[i]) {
+            if ( magicHand[i].getValue() == luckyCard.getValue() && magicHand[i].getSuit() == luckyCard.getSuit()) {
+                
                 found = true;
-        }   else {
+        
+            }   else {
+         
                 found = false;
+            }
         }
             
-        // for loop that searches the magic hand and compares the value generated to the users card
-        for (int i = 0; i < magicHand.length; i++) {
-            
-            // if statement
-            if (magicHand[i].getValue() == value && magicHand[i].getSuit() == suit) {
-                
-                found = true;
-                
-            } else {
-                
-                found = false;
-                
-            }   // end of if statement
-        
-        }   // end of for loop
+//        // for loop that searches the magic hand and compares the value generated to the users card
+//        for (int i = 0; i < magicHand.length; i++) {
+//            
+//            // if statement
+//            if (magicHand[i].getValue() == value && magicHand[i].getSuit() == suit) {
+//                
+//                found = true;
+//                
+//            } else {
+//                
+//                found = false;
+//                
+//            }   // end of if statement
+//        
+//        }   // end of for loop
     
             // if statemnt that prints out the result to the user
             if (found == true) {
