@@ -15,11 +15,11 @@ public class CardTrick {
     
     public static void main(String[] args) {
     
-        Scanner in = new Scanner(System.in);
+        //Scanner in = new Scanner(System.in);
         boolean foundCard = true;
         Card luckyCard = new Card();
         luckyCard.setValue(8);
-        luckyCard.setSuit(SUITS[1]);
+        luckyCard.setSuit(Card.SUITS[1]);
         Card[] magicHand = new Card[7];
         
         for (int i = 0; i < magicHand.length; i++) {
@@ -35,8 +35,8 @@ public class CardTrick {
         //System.out.println("Please enter card suit to find: ");
         //String suit = in.nextLine();
         
-        for (int i = 0; i < magicHand.length; i++) {
-            if (magicHand[i].getValue() == value && magicHand[i].getSuit().equalsIgnoreCase(suit)) {
+        for (Card magicHand1 : magicHand) {
+            if (magicHand1.getValue() == luckyCard.getValue() && magicHand1.getSuit().equalsIgnoreCase(luckyCard.getSuit())) {
                 System.out.println("Congrats! Your card was found in the magichand!");
                 foundCard = true;
                 break;
