@@ -29,7 +29,10 @@ public class CardTrick {
             magicHand[i] = c;
         }
         
-        System.out.println("Please enter a card value: ");
+        Card luckyCard = new Card();
+        luckyCard.setSuit = ("Diamonds");
+        luckyCard.setValue = 13;
+       /** System.out.println("Please enter a card value: ");
         Scanner sc = new Scanner(System.in);
         int cardValue = sc.nextInt();
         System.out.println("Please enter a suit: ");
@@ -46,7 +49,7 @@ public class CardTrick {
                         + magicHand[i].getSuit());
             }
         }
-        
+        **/
         //insert code to ask the user for Card value and suit, create their card
         // and search magicHand here
         //Then report the result here
