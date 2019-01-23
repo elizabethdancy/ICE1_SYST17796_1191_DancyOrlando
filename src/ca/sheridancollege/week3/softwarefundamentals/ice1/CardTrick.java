@@ -37,7 +37,8 @@ public class CardTrick {
         
         //Code for ask the user to pick a card
          //insert code to ask the user for Card value and suit, create their card
-        System.out.println("Please enter Card Value to Search: ");
+        
+        /*System.out.println("Please enter Card Value to Search: ");
         int value1 = in.nextInt();
         
         in.nextLine();
@@ -60,6 +61,29 @@ public class CardTrick {
         if (found == false) {
             System.out.println("Can not find your card");
         }
+        */
+        
+        Card luckyCard = new Card();
+        luckyCard.setValue(10);
+        luckyCard.setSuit(Card.SUITS[2]);
+        
+          for (Card c1 : magicHand) 
+        {
+            if (c1.getValue() == luckyCard.getValue() && c1.getSuit()==luckyCard.getSuit()) {
+                System.out.println("It is matched with the magicaHand");
+            found = true;
+                break;
+            } 
+            else 
+            {
+                found = false;
+            }
+        }
+        
+        if (found == false) {
+            System.out.println("Can not find your card");
+        }
+        
     /**
      *
      * @return
