@@ -35,17 +35,32 @@ public class CardTrick {
             magicHand[i] = c;
         }
         
-        // ask user for card value
-        System.out.print("Card Value (1-13):");
-        Scanner input = new Scanner(System.in);
-        int value = input.nextInt();
-        // ask the user for a suit number
-        System.out.print("Suit (1-3):");
-        String suit = input.next();
+//         // ask user for card value
+//         System.out.print("Card Value (1-13):");
+//         Scanner input = new Scanner(System.in);
+//          int value = input.nextInt();
+//         // ask the user for a suit number
+//         System.out.print("Suit (0-3):");
+//         String suit = input.next();
+//         // declare and initialize the default value of a boolean
+//         boolean found = true;   
+
+        Card luckyCard = new luckyCard();
+        luckyCard.setValue() = 2;
+        luckyCard.setSuit() = 3;
         
-        // declare and initialize the default value of a boolean
-        boolean found = true;   
+        luckyValue = 2;
+        luckySuit = 3;
         
+        System.out.println("Checking lucky card");
+        
+        for (int i = 0; i < magicHand.length; i++) {
+            if ( luckyValue == magicHand[i].getValue() && luckySuit == magicHand[i]) {
+                found = true;
+        }   else {
+                found = false;
+        }
+            
         // for loop that searches the magic hand and compares the value generated to the users card
         for (int i = 0; i < magicHand.length; i++) {
             
@@ -61,7 +76,7 @@ public class CardTrick {
             }   // end of if statement
         
         }   // end of for loop
-            
+    
             // if statemnt that prints out the result to the user
             if (found == true) {
                 
@@ -71,7 +86,7 @@ public class CardTrick {
                 
                  System.out.println("You lose");
             }   // end of if statement
-    
+        
     }   // end of main
         
 }   // end of class
