@@ -20,7 +20,12 @@ public class CardTrick {
     public static void main(String[] args)
     {
         Card[] magicHand = new Card[7];
-        Card userCard = new Card();
+        //Card userCard = new Card();
+        Card luckyCard=newCard();
+        luckyCard.setValue(3);
+        luckyCard.setSuit(Card.SUITS[3]);
+        System.out.println("Lucky card is: "+luckyCard.getValue()+luckyCard.getSuit());
+        
         boolean match=false;
         
         Scanner myScanner = new Scanner(System.in);
@@ -28,8 +33,8 @@ public class CardTrick {
         userCard.setValue(myScanner.nextInt());
         System.out.println("Pick a card suit (0-Hearts, 1-Diamonds, 2-Spades, 3-Clubs)");
         userCard.setSuit(Card.SUITS[myScanner.nextInt()]);
-        System.out.println("you picked card value of:"+userCard.getValue());
-        System.out.println("you picked card suit of:"+userCard.getSuit());
+        //System.out.println("you picked card value of:"+userCard.getValue());
+        //System.out.println("you picked card suit of:"+userCard.getSuit());
         
         System.out.println("Cards in the hand are:");
         for (int i=0; i<magicHand.length; i++)
@@ -40,7 +45,7 @@ public class CardTrick {
             //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
             c.setSuit(Card.SUITS[(int)(Math.random()*3)]);
             System.out.println(c.getValue()+c.getSuit());
-            if((c.getValue()==userCard.getValue())&&(c.getSuit()==userCard.getSuit())){
+            if((c.getValue()==luckyCard.getValue())&&(c.getSuit()==luckyCard.getSuit())){
                 match=true;
             }
             magicHand[i]=c;
@@ -52,9 +57,9 @@ public class CardTrick {
         //Then report the result here
         
         if(match){
-            System.out.println("You're card is in the magicHand");
+            System.out.println("The lucky card is in the magicHand");
         }else{
-            System.out.println("You're card is NOT in the magicHand");
+            System.out.println("The lucky card is NOT in the magicHand");
         }
         
         
