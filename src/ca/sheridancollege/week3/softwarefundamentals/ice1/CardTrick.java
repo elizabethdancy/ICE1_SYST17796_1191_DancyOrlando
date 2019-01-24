@@ -37,17 +37,17 @@ public class CardTrick {
         // and search magicHand here
         //Scanner in = new Scanner(System.in);
         //System.out.println("Input a card (1-13) > ");
-        Card card = new Card();
+        Card magicCard = new Card();
         //card.setValue(in.nextInt());
-        card.setValue(8);
+        magicCard.setValue(8);
         //System.out.println("Input a suit (1-4) > ");
         //card.setSuit(Card.SUITS[in.nextInt()]);
-        card.setSuit(Card.SUITS[3]);
+        magicCard.setSuit(Card.SUITS[3]);
         //Then report the result here
         boolean found = false;
         for (int i=0; i<magicHand.length; i++)
         {
-            if(magicHand[i].getValue() == card.getValue() && magicHand[i].getSuit() == card.getSuit())
+            if(magicHand[i].getValue() == magicCard.getValue() && magicHand[i].getSuit() == magicCard.getSuit())
             {
                 found = true;
             }
