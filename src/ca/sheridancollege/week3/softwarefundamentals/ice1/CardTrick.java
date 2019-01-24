@@ -33,17 +33,24 @@ public class CardTrick {
             System.out.println(magicHand[i].getSuit());
         }
         
-        //insert code to ask the user for Card value and suit, create their card
-        // and search magicHand here
+        /**
+         * insert code to ask the user for Card value and suit, create their
+         * card and search magicHand here
+         */        
         //Scanner in = new Scanner(System.in);
-        //System.out.println("Input a card (1-13) > ");
         Card magicCard = new Card();
+        
+        //System.out.println("Input a card (1-13) > ");
         //card.setValue(in.nextInt());
         magicCard.setValue(8);
+        
         //System.out.println("Input a suit (1-4) > ");
         //card.setSuit(Card.SUITS[in.nextInt()]);
         magicCard.setSuit(Card.SUITS[3]);
-        //Then report the result here
+        
+        /**
+         * Then report the result here
+         */
         boolean found = false;
         for (int i=0; i<magicHand.length; i++)
         {
