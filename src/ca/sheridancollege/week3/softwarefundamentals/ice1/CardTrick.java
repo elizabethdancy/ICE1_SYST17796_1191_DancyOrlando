@@ -92,7 +92,13 @@ public class CardTrick {
                 isInHand = true;
             }
         }
-
+        //search for lucky card
+        boolean isLuckyCard = false;
+        for (int i = 0; i < magicHand.length; i++) {
+            if (magicHand[i].getValue() == luckyCard.getValue() && magicHand[i].getSuit() == luckyCard.getSuit()) {
+                isLuckyCard = true;
+            }
+        }
         //Then report the result here
         System.out.printf("\nYour hand: %d %s \n", userCard.getValue(), userCard.getSuit());
         System.out.print("The magic hand: ");
@@ -101,7 +107,7 @@ public class CardTrick {
         }
 
         //isInHand will be used here to display results.
-        if (isInHand == true) {
+        if (isInHand == true || isLuckyCard == true) {
             System.out.println("\nYour card is in the magic hand!");
         } else {
             System.out.println("\nYour card is not in the magic hand!");
