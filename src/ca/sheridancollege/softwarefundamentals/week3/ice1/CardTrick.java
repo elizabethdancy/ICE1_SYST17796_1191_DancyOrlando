@@ -11,7 +11,7 @@ import java.util.Random;
  * A class that fills a magic hand of 7 cards with random Card Objects
  * and then asks the user to pick a card and searches the array of cards
  * for the match to the user's card. To be used as starting code in ICE 1
- * @author dancye
+ * @author dancye, 2020
  */
 public class CardTrick {
     
@@ -35,6 +35,8 @@ public class CardTrick {
         Card luckyCard = new Card();
         luckyCard.setSuit("Hearts");
         luckyCard.setValue(7);
+        
+        
     }
     
 }
